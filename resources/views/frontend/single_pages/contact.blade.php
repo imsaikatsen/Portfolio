@@ -1,10 +1,10 @@
 @extends('frontend.layouts.master')
 @section('content')
-<section class="site-section bg-light" id="contact-section">
+<section class="site-section bg-light" id="contact-section" style="margin-top: 20px;">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
-                        <h2 class="text-black h1 site-section-heading">Contact</h2>
+                        <h2 class="text-black h1 site-section-heading">Contact Me</h2>
                     </div>
                 </div>
                 <div class="row">

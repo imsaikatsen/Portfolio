@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row mb-5 justify-content-center">
                     <div class="col-md-8 text-center">
-                        <h2 class="text-black h1 site-section-heading text-center">Works</h2>
+                        <h2 class="text-black h1 site-section-heading text-center">Projects</h2>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, itaque neque, delectus odio iure explicabo.</p>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
                     <div class="col-md-5">
                         <div class="p-4 mb-3 bg-white">
                             <p class="mb-0 font-weight-bold">Address</p>
-                            <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                            <p class="mb-4">Kallyanpur,Dhaka</p>
                             <p class="mb-0 font-weight-bold">Phone</p>
                             <p class="mb-4"><a href="#">+8801717529587</a></p>
                             <p class="mb-0 font-weight-bold">Email Address</p>

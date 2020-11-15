@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('content')
- <div class="site-section" id="about-section">
+ <div class="site-section" id="about-section" style="margin-top: 20px;">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade">
