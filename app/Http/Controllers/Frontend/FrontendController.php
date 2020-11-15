@@ -23,5 +23,10 @@ class FrontendController extends Controller
     	return view('frontend.single_pages.contact');
     }
 
+    public function blog($id){
+        $blog = Blog::find($id);
+        return view('frontend.single_pages.blog-details',compact('blog'));
+    }
+
 
 }

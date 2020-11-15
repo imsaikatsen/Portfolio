@@ -68,44 +68,7 @@
                 </div>
             </div>
         </section>
-        <section class="section ft-feature-1">
-            <div class="container">
-                <div class="row align-items-stretch">
-                    <div class="col-12 bg-black w-100 ft-feature-1-content">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5">
-                                <img src="{{asset('public/frontend/images/about_1.jpg')}}" alt="Image" class="img-fluid mb-4 mb-lg-0">
-                            </div>
-                            <div class="col-lg-3 ml-auto">
-                                <div class="mb-5">
-                                    <h3 class="d-flex align-items-center"><span class="icon icon-beach_access mr-2"></span><span>Strategy</span></h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                                    <p><a href="#">Read More</a></p>
-                                </div>
-                                <div>
-                                    <h3 class="d-flex align-items-center"><span class="icon icon-build mr-2"></span><span>Web Development</span></h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                                    <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="mb-5">
-                                    <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Art Direction</span></h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                                    <p><a href="#">Read More</a></p>
-                                </div>
-                                <div>
-                                    <h3 class="d-flex align-items-center"><span class="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                                    <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="site-section testimonial-wrap">
+    <!--     <section class="site-section testimonial-wrap">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
@@ -159,7 +122,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
    
         <div class="site-section" id="about-section">
             <div class="container">
@@ -192,32 +155,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                    <div class="col-md-9 col-lg-4 mb-4 mb-lg-4">
+                        @foreach($blog as $key => $blog)
                         <div class="h-entry">
-                            <a href="single.html"><img src="{{asset('public/frontend/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
-                            <h2 class="font-size-regular"><a href="single.html">Create Beautiful Website In Less Than An Hour</a></h2>
-                            <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <p><a href="#">Continue Reading...</a></p>
+                            <a href="single.html"><img src="{{asset('public/upload/blog_images/'.$blog->image)}}" style="width: 240px; height: 200px;" alt="Image" class="img-fluid"></a>
+                            <h2 class="font-size-regular"> {{$key+1}}. <a href="single.html">{{$blog->short_title}}</a></h2>
+                            <div class="meta mb-4">Created By Saikat Sen <span class="mx-2">&bullet;</span>{{date('d-m-Y',strtotime($blog->date))}}<span class="mx-2">&bullet;</span> <a>News</a></div>
+                            <p><a href="{{route('blog.details',$blog->id)}}">Continue Reading</a></p>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                        <div class="h-entry">
-                            <a href="single.html"><img src="{{asset('public/frontend/images/img_2.jpg')}}" alt="Image" class="img-fluid"></a>
-                            <h2 class="font-size-regular"><a href="single.html">Create Beautiful Website In Less Than An Hour</a></h2>
-                            <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <p><a href="#">Continue Reading...</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-                        <div class="h-entry">
-                            <a href="single.html"><img src="{{asset('public/frontend/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
-                            <h2 class="font-size-regular"><a href="single.html">Create Beautiful Website In Less Than An Hour</a></h2>
-                            <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <p><a href="#">Continue Reading...</a></p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

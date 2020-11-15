@@ -18,6 +18,7 @@
 Route::get('/','Frontend\FrontendController@index');
 Route::get('about', 'Frontend\FrontendController@about')->name('about');
 Route::get('contact', 'Frontend\FrontendController@contact')->name('contact');
+Route::get('/blog/details/{id}' , 'Frontend\FrontendController@blog')->name('blog.details');
 
 Auth::routes();
 
