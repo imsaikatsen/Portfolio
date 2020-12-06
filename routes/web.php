@@ -16,11 +16,14 @@
 // });
 
 Route::get('/','Frontend\FrontendController@index');
-Route::get('about', 'Frontend\FrontendController@about')->name('about');
-Route::get('contact', 'Frontend\FrontendController@contact')->name('contact');
+Route::get('/about', 'Frontend\FrontendController@about')->name('about');
+Route::get('/project', 'Frontend\FrontendController@project')->name('project');
+Route::get('/contact', 'Frontend\FrontendController@contact')->name('contact');
 Route::get('/blog/details/{id}' , 'Frontend\FrontendController@blog')->name('blog.details');
 
+
 Auth::routes();
+Auth::routes(['register' => false ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -53,6 +56,17 @@ Route::prefix('blog')->group(function(){
 	Route::get('/edit/{id}', 'Backend\BlogController@edit')->name('blog.edit');
 	Route::post('/update/{id}', 'Backend\BlogController@update')->name('blog.update');
 	Route::get('/delete/{id}', 'Backend\BlogController@delete')->name('blog.delete');
+
+});
+
+Route::prefix('project')->group(function(){
+
+	Route::get('/view', 'Backend\ProjectController@view')->name('project.view');
+	Route::get('/add', 'Backend\ProjectController@add')->name('project.add');
+	Route::post('/store', 'Backend\ProjectController@store')->name('project.store');
+	Route::get('/edit/{id}', 'Backend\ProjectController@edit')->name('project.edit');
+	Route::post('/update/{id}', 'Backend\ProjectController@update')->name('project.update');
+	Route::get('/delete/{id}', 'Backend\ProjectController@delete')->name('project.delete');
 
 });
 

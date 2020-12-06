@@ -18,14 +18,19 @@ class FrontendController extends Controller
     	return view('frontend.single_pages.about');
     }
 
+    public function project(){
+        
+        return view('frontend.single_pages.project');
+    }
+
     public function contact(){
     	
     	return view('frontend.single_pages.contact');
     }
 
     public function blog($id){
-        $blog = Blog::find($id);
-        return view('frontend.single_pages.blog-details',compact('blog'));
+        $data['blog'] = Blog::find($id);
+        return view('frontend.single_pages.blog-details',$data);
     }
 
 

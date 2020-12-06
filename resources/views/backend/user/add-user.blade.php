@@ -38,15 +38,6 @@
                <form method="post" action="{{route('users.store')}}" id="myForm">
                 @csrf
                 <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="usertype">User Role</label>
-                      <select name="usertype" id="usertype" class="form-control">
-                        <option value="">Select Role</option>
-                        <option value="Admin">Admin</option>
-                        <option value="User">User</option>
-                      </select>  
-                    </div> 
-
                     <div class="form-group col-md-4">
                       <label for="name">Name</label>
                       <input type="text" name="name" class="form-control">

@@ -1,5 +1,4 @@
-
-     <div class="site-wrap">
+ <div class="site-wrap">
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
                 <div class="site-mobile-menu-close mt-3">
@@ -41,8 +40,8 @@
                                 <li>
                                     <a href="{{route('about')}}" class="nav-link">About</a>
                                 </li>
-                                <li><a href="" class="nav-link">Projects</a></li>
-                                <li><a href="" class="nav-link">Blog</a></li>
+                                <li><a href="{{route('project')}}" class="nav-link">Projects</a></li>
+                                <li><a href="#" class="nav-link">Blog</a></li>
                                 <li><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                             </ul>
                         </nav>
@@ -52,18 +51,4 @@
             </div>
         </header>
        
-      <!--   <div class="site-blocks-cover overlay" style="background-image: url(public/frontend/images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row align-items-center justify-content-center text-center">
-                    <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-                        <div class="row justify-content-center mb-4">
-                            <div class="col-md-8 text-center">
-                                <h1>I Love To Build <span class="typed-words"></span></h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
        

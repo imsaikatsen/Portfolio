@@ -38,15 +38,6 @@
                <form method="post" action="{{route('users.update',$editData->id)}}" id="myForm">
                 @csrf
                 <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="usertype">User Role</label>
-                      <select name="usertype" id="usertype" class="form-control">
-                        <option value="">Select Role</option>
-                        <option value="Admin" {{($editData->usertype=="Admin")?"selected":""}}>Admin</option>
-                        <option value="User" {{($editData->usertype=="User")?"selected":""}}>User</option>
-                      </select>  
-                    </div> 
-
                     <div class="form-group col-md-4">
                       <label for="name">Name</label>
                       <input type="text" name="name" value="{{$editData->name}}" class="form-control">

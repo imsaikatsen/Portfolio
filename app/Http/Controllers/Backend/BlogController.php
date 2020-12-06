@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use App\Model\Blog;
+use App\Http\Requests\StoreBlog;
 
 class BlogController extends Controller
 {
@@ -18,7 +19,7 @@ class BlogController extends Controller
     	return view('backend.blogs.add-blog');
     }
 
-    public function store(Request $request){
+    public function store(StoreBlog $request){
     	$data = New Blog();
     	$data->date = date('y-m-d',strtotime($request->date));
         $data->short_title = $request->short_title;
@@ -26,7 +27,7 @@ class BlogController extends Controller
         $data->created_by = Auth::user()->id;
         if ($request->file('image')){
             $file = $request->file('image');
-            @unlink(public_path('upload/blog_images/'.$data->iamage));
+            @unlink(public_path('upload/blog_images/'.$data->image));
             $filename = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('upload/blog_images'), $filename);
             $data['image'] = $filename;

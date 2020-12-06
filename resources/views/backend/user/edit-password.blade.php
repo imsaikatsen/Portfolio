@@ -48,7 +48,7 @@
                   </div>
 
                   <div class="form-group col-md-4">
-                      <label for="again_new_password">Again New Password</label>
+                      <label for="again_new_password">Confirm Password</label>
                       <input type="password" name="again_new_password" class="form-control">
                   </div>
 
