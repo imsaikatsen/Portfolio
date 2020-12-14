@@ -22,22 +22,11 @@ Route::get('/contact', 'Frontend\FrontendController@contact')->name('contact');
 Route::get('/blog/details/{id}' , 'Frontend\FrontendController@blog')->name('blog.details');
 
 
-Auth::routes();
-Auth::routes(['register' => false ]);
+//Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-	
-	Route::prefix('users')->group(function(){
-
-	Route::get('/view', 'Backend\UserController@view')->name('users.view');
-	Route::get('/add', 'Backend\UserController@add')->name('users.add');
-	Route::post('/store', 'Backend\UserController@store')->name('users.store');
-	Route::get('/edit/{id}', 'Backend\UserController@edit')->name('users.edit');
-	Route::post('/update/{id}', 'Backend\UserController@update')->name('users.update');
-	Route::get('/delete/{id}', 'Backend\UserController@delete')->name('users.delete');
-});
 
 Route::prefix('profiles')->group(function(){
 
